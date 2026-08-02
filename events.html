@@ -68,6 +68,30 @@
       margin: 0 auto 2rem;
     }
 
+
+    .calendar-button {
+      display: inline-block;
+      margin: 0.5rem auto 0;
+      padding: 0.85rem 1.4rem;
+      color: #f6f5f2;
+      background: #a20f2d;
+      font-family: "Bodoni Moda", "Bodoni 72", Didot, serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.16em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 1px solid #a20f2d;
+      transition:
+        background-color 150ms ease,
+        color 150ms ease;
+    }
+
+    .calendar-button:hover,
+    .calendar-button:focus-visible {
+      color: #a20f2d;
+      background: transparent;
+    }
+
     .links {
       display: flex;
       justify-content: center;
@@ -109,6 +133,15 @@
       src="Promo_Square.jpg"
       alt="Graphite and Grief event promotion"
     >
+
+    <a
+      class="calendar-button"
+      href="https://addcal.io/e/xru4cqbo6x46"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Add to Calendar
+    </a>
 
     <nav class="links" aria-label="Page navigation">
       <a href="index.html">Return home</a>
