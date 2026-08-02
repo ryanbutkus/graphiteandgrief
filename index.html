@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Graphite &amp; Grief</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 3rem 2rem;
+      background: #f6f5f2;
+      color: #272727;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 2rem;
+      font-family: "Bodoni Moda", "Bodoni 72", Didot, serif;
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .ampersand {
+      color: #a20f2d;
+      letter-spacing: 0;
+    }
+
+    .feature-image {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem 2rem;
+    }
+
+    .links a {
+      color: #272727;
+      font-family: "Bodoni Moda", "Bodoni 72", Didot, serif;
+      font-size: 1rem;
+      letter-spacing: 0.16em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 1px solid transparent;
+      transition: color 150ms ease, border-color 150ms ease;
+    }
+
+    .links a:hover,
+    .links a:focus-visible {
+      color: #a20f2d;
+      border-bottom-color: #a20f2d;
+    }
+
+    .social-links { margin-top: 2rem; }
+
+    .page-links {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(39, 39, 39, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Graphite <span class="ampersand">&amp;</span> Grief</h1>
+
+    <img
+      class="feature-image"
+      src="Insight_PS.jpg"
+      alt="Graphite and Grief featured artwork"
+    >
+
+    <nav class="links social-links" aria-label="Social media">
+      <a
+        href="https://www.instagram.com/graphiteandgrief"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Instagram</a>
+    </nav>
+
+    <nav class="links page-links" aria-label="Site sections">
+      <a href="drawing.html">Drawing</a>
+      <a href="modeling.html">Modeling</a>
+      <a href="events.html">Events</a>
+    </nav>
+  </main>
+</body>
+</html>

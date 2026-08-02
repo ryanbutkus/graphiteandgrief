@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Drawing | Graphite &amp; Grief</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 3rem 1.25rem 4rem;
+      background: #f6f5f2;
+      color: #272727;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .site-title {
+      margin: 0 0 3rem;
+      font-family: "Bodoni Moda", "Bodoni 72", Didot, serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .ampersand {
+      color: #a20f2d;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0 0 1.5rem;
+      font-family: "Bodoni Moda", "Bodoni 72", Didot, serif;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      width: 80px;
+      height: 1px;
+      margin: 0 auto 3rem;
+      background: #a20f2d;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem 1.5rem;
+      align-items: start;
+    }
+
+    .gallery-item {
+      margin: 0;
+    }
+
+    .gallery-item a {
+      display: block;
+      overflow: hidden;
+      background: #e9e7e2;
+    }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: 360px;
+      object-fit: contain;
+      background: #e9e7e2;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .gallery-item a:hover img,
+    .gallery-item a:focus-visible img {
+      transform: scale(1.015);
+      opacity: 0.94;
+    }
+
+    figcaption {
+      margin-top: 0.8rem;
+      font-family: "Bodoni Moda", "Bodoni 72", Didot, serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem 2rem;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(39, 39, 39, 0.2);
+    }
+
+    .links a {
+      color: #272727;
+      font-family: "Bodoni Moda", "Bodoni 72", Didot, serif;
+      font-size: 1rem;
+      letter-spacing: 0.16em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 1px solid transparent;
+      transition: color 150ms ease, border-color 150ms ease;
+    }
+
+    .links a:hover,
+    .links a:focus-visible {
+      color: #a20f2d;
+      border-bottom-color: #a20f2d;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding-top: 2rem;
+      }
+
+      .site-title {
+        margin-bottom: 2.25rem;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: 2.25rem;
+      }
+
+      .gallery-item img {
+        height: auto;
+        max-height: 75vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="site-title">
+      Graphite <span class="ampersand">&amp;</span> Grief
+    </div>
+
+    <h1>Drawing</h1>
+    <div class="divider"></div>
+
+    <section class="gallery" aria-label="Drawing gallery">
+      <figure class="gallery-item">
+        <a href="pics/Ache_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Ache_Site.jpeg"
+            alt="Ache"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Ache</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Again_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Again_Site.jpeg"
+            alt="Again"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Again</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Another Life_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Another Life_Site.jpeg"
+            alt="Another Life"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Another Life</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Ascend_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Ascend_Site.jpeg"
+            alt="Ascend"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Ascend</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Aversion_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Aversion_Site.jpeg"
+            alt="Aversion"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Aversion</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Avulsion_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Avulsion_Site.jpeg"
+            alt="Avulsion"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Avulsion</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Backseat Gaming_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Backseat Gaming_Site.jpeg"
+            alt="Backseat Gaming"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Backseat Gaming</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Bee_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Bee_Site.jpeg"
+            alt="Bee"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Bee</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Cancer_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Cancer_Site.jpeg"
+            alt="Cancer"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Cancer</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Delusion_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Delusion_Site.jpeg"
+            alt="Delusion"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Delusion</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Dramatic_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Dramatic_Site.jpeg"
+            alt="Dramatic"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Dramatic</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Drip_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Drip_Site.jpeg"
+            alt="Drip"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Drip</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Embrace For It_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Embrace For It_Site.jpeg"
+            alt="Embrace For It"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Embrace For It</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Eruption_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Eruption_Site.jpeg"
+            alt="Eruption"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Eruption</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Evidence_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Evidence_Site.jpeg"
+            alt="Evidence"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Evidence</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Forgiven_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Forgiven_Site.jpeg"
+            alt="Forgiven"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Forgiven</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Fragment_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Fragment_Site.jpeg"
+            alt="Fragment"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Fragment</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Freeze_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Freeze_Site.jpeg"
+            alt="Freeze"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Freeze</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Grace_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Grace_Site.jpeg"
+            alt="Grace"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Grace</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Hollow Bones_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Hollow Bones_Site.jpeg"
+            alt="Hollow Bones"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Hollow Bones</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Insight_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Insight_Site.jpeg"
+            alt="Insight"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Insight</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Intent_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Intent_Site.jpeg"
+            alt="Intent"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Intent</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Intrustive Thoughts_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Intrustive Thoughts_Site.jpeg"
+            alt="Intrustive Thoughts"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Intrustive Thoughts</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Mosquito_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Mosquito_Site.jpeg"
+            alt="Mosquito"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Mosquito</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Paranoia_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Paranoia_Site.jpeg"
+            alt="Paranoia"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Paranoia</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Personal Growth_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Personal Growth_Site.jpeg"
+            alt="Personal Growth"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Personal Growth</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Prodrome_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Prodrome_Site.jpeg"
+            alt="Prodrome"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Prodrome</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Put It On Paper_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Put It On Paper_Site.jpeg"
+            alt="Put It On Paper"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Put It On Paper</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Scoot_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Scoot_Site.jpeg"
+            alt="Scoot"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Scoot</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Self Portrait_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Self Portrait_Site.jpeg"
+            alt="Self Portrait"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Self Portrait</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Sensational Perception_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Sensational Perception_Site.jpeg"
+            alt="Sensational Perception"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Sensational Perception</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Sequela_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Sequela_Site.jpeg"
+            alt="Sequela"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Sequela</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Standard Beauty_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Standard Beauty_Site.jpeg"
+            alt="Standard Beauty"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Standard Beauty</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/To Tame_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/To Tame_Site.jpeg"
+            alt="To Tame"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>To Tame</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="pics/Wellness_Site.jpeg" target="_blank" rel="noopener noreferrer">
+          <img
+            src="pics/Wellness_Site.jpeg"
+            alt="Wellness"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>Wellness</figcaption>
+      </figure>
+    </section>
+
+    <nav class="links" aria-label="Page navigation">
+      <a href="index.html">Return home</a>
+      <a
+        href="https://www.instagram.com/graphiteandgrief"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+    </nav>
+  </main>
+</body>
+</html>
